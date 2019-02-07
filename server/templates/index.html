@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <title>Fisica Electrica App</title>
+</head>
+
+<body>
+    <div class="section hero">
+        <div class="container">
+
+            <h1>Aplicacion Fisica Electrica</h1>
+
+            <h6 class="section-heading">Por Jorge Miguel Hernandez Santos</h6>
+
+
+
+            <!-- The above form looks like this -->
+            <form>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="magnitude"></label>
+                        <input class="u-full-width" type="text" placeholder="Magnitud: +00.00 o -00" id="magnitude">
+                    </div>
+
+                    <div class="six columns">
+                        <label for="coordinate"></label>
+                        <input class="u-full-width" type="text" placeholder="Coordenada: X,Y,Z" id="coordinate">
+                    </div>
+
+                    <input class="button-primary" id="add_btn" type="button" value="agregar">
+            </form>
+
+
+            <table id="ctable" class="u-full-width center">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Magnitud</th>
+                        <th>Coordenada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <div class="row">
+
+                <div class="six columns">
+                    <label for="charge">Carga al cual se aplicara la fuerza</label>
+                    <select class="u-full-width" id="charge">
+                    </select>
+
+                    <input class="button-primary" id="cal_btn" type="button" value="Calcular Fuerza">
+                </div>
+
+            </div>
+
+
+           <label id="total" style="font-size: 40px"  for="total_streng">0.00N</label>
+            
+     
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='code.js') }}"></script>
+</body>
+
+
+</html>
