@@ -17,7 +17,6 @@
 
             <h6 class="section-heading">Por Jorge Miguel Hernandez Santos</h6>
 
-
             <div class="menu">
                 <button ><a href="http://localhost:5000">Fuerza</a></button>
                 <button ><a href="http://localhost:5000/campo">Campo Eléctrico</a></button>      
@@ -26,8 +25,9 @@
             </div>
 
             <!-- The above form looks like this -->
+
             <br>
-            <h3>Fuerza</h3>
+            <h3>Energia Potencial Eléctrica</h3>
             <form>
                 <div class="row">
                     <div class="six columns">
@@ -59,32 +59,31 @@
             <div class="row">
 
                 <div class="six columns">
-                    <label for="charge">Carga al cual se aplicara la fuerza</label>
-                    <select class="u-full-width" id="charge">
-                    </select>
+                    <div hidden>
+                        <label for="charge">Carga al cual se aplicara la fuerza</label>
+                        <select class="u-full-width" id="charge">
+                        </select>
 
-                    <input class="button-primary" id="cal_btn" type="button" value="Calcular Fuerza">
+                    </div>
+
+                    <input class="button-primary" id="cal_btn" type="button" value="Calcular Energia Potencia">
                 </div>
 
             </div>
 
-            <label id="label_fx" style="font-size: 20px"  for="label_fx">FX: 0.00N</label>
-            <label id="label_fy" style="font-size: 20px"  for="label_fy">FY: 0.00N</label>
-            <label id="label_fz" style="font-size: 20px"  for="label_fz">FZ: 0.00N</label>
-           <label id="total" style="font-size: 40px"  for="total_streng">0.00N</label>
-           <input type="hidden" id="type" name="type" value="fuerza">
-     
 
+            <label id="total" style="font-size: 40px"  for="total_streng">0.00J</label>
+            
+     
+            <input type="hidden" id="type" name="type" value="energia">
         </div>
     </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
-    
     <script type="text/javascript" src="{{ url_for('static', filename='util.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='code.js') }}"></script>
-
 </body>
 
 
